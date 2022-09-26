@@ -58,12 +58,12 @@ steps:
       publishWebProjects: false
       arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
       zipAfterPublish: true
-
-  - template: build.yml
+      
+  - template: templates/build.yml
     parameters:
       buildConfiguration: 'Debug'
     
-  - template: build.yml
+  - template: templates/build.yml
     parameters:
       buildConfiguration: 'Release'
 
